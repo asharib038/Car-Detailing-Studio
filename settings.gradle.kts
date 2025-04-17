@@ -19,6 +19,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "CDS"
+rootProject.name = "UserAccountManagement"
 include(":app")
- 
