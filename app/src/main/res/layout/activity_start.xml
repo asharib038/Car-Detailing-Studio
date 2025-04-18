@@ -5,8 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
-    android:padding="16dp"
-    tools:context="com.se.useraccountmanagement.MainActivity">
+    android:padding="16dp">
 
     <!-- Main welcome text view -->
     <TextView

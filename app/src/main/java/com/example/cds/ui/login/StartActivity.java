@@ -1,6 +1,8 @@
-package com.se.useraccountmanagement;
+package com.example.cds.ui.login;
 
-import com.se.useraccountmanagement.R;
+
+
+import com.example.cds.R;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
@@ -16,7 +18,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-public class MainActivity extends AppCompatActivity {
+public class StartActivity extends AppCompatActivity {
 
     private FirebaseAuth mAuth;
     private DatabaseReference mDatabase;
@@ -25,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_user_main);
+        setContentView(R.layout.activity_start);
 
         // Initialize Firebase
         mAuth = FirebaseAuth.getInstance();
@@ -38,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
         FirebaseUser currentUser = mAuth.getCurrentUser();
         if (currentUser == null) {
             // User not logged in, redirect to Login
-            startActivity(new Intent(this, LoginActivity.class));
+            startActivity(new Intent(this, com.example.cds.ui.login.LoginActivity.class));
             finish();
             return;
         }
@@ -83,11 +85,11 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == R.id.menu_profile) {
-            startActivity(new Intent(this, ProfileActivity.class));
+            startActivity(new Intent(this, com.example.cds.ui.login.ProfileActivity.class));
             return true;
         } else if (item.getItemId() == R.id.menu_logout) {
             mAuth.signOut();
-            startActivity(new Intent(this, LoginActivity.class));
+            startActivity(new Intent(this, com.example.cds.ui.login.LoginActivity.class));
             finish();
             return true;
         }
@@ -99,7 +101,7 @@ public class MainActivity extends AppCompatActivity {
         super.onStart();
         // Double-check authentication when activity resumes
         if (mAuth.getCurrentUser() == null) {
-            startActivity(new Intent(this, LoginActivity.class));
+            startActivity(new Intent(this, com.example.cds.ui.login.LoginActivity.class));
             finish();
         }
     }

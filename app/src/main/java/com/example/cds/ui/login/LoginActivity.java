@@ -1,4 +1,4 @@
-package com.se.useraccountmanagement;
+package com.example.cds.ui.login;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,6 +10,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.cds.R;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
@@ -84,10 +85,10 @@ public class LoginActivity extends AppCompatActivity {
         findViewById(R.id.loginButton).setOnClickListener(v -> loginWithEmail());
         findViewById(R.id.googleSignInButton).setOnClickListener(v -> signInWithGoogle());
         findViewById(R.id.forgotPasswordText).setOnClickListener(v -> {
-            startActivity(new Intent(LoginActivity.this, ForgotPasswordActivity.class));
+            startActivity(new Intent(com.example.cds.ui.login.LoginActivity.this, com.example.cds.ui.login.ForgotPasswordActivity.class));
         });
         findViewById(R.id.signUpButton).setOnClickListener(v -> {
-            startActivity(new Intent(LoginActivity.this, RegisterActivity.class));
+            startActivity(new Intent(com.example.cds.ui.login.LoginActivity.this, com.example.cds.ui.login.RegisterActivity.class));
         });
     }
 
@@ -230,7 +231,7 @@ public class LoginActivity extends AppCompatActivity {
 
     private void navigateToMainActivity() {
         Toast.makeText(this, "Signed in successfully!", Toast.LENGTH_SHORT).show();
-        startActivity(new Intent(this, MainActivity.class));
+        startActivity(new Intent(this, com.example.cds.ui.login.StartActivity.class));
         finish();
     }
 

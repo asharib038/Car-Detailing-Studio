@@ -1,10 +1,12 @@
-package com.se.useraccountmanagement;
+package com.example.cds.ui.login;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.TextView;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.cds.R;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -74,7 +76,7 @@ public class ProfileActivity extends AppCompatActivity {
                     });
         } else {
             // User not logged in, redirect to login
-            startActivity(new Intent(this, LoginActivity.class));
+            startActivity(new Intent(this, com.example.cds.ui.login.LoginActivity.class));
             finish();
         }
     }

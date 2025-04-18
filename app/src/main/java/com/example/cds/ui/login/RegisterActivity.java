@@ -1,4 +1,4 @@
-package com.se.useraccountmanagement;
+package com.example.cds.ui.login;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,6 +13,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.cds.R;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseAuthUserCollisionException;
 import com.google.firebase.auth.FirebaseAuthWeakPasswordException;
@@ -154,7 +155,7 @@ public class RegisterActivity extends AppCompatActivity {
                                             Toast.makeText(RegisterActivity.this,
                                                     "Registration successful!",
                                                     Toast.LENGTH_SHORT).show();
-                                            startActivity(new Intent(RegisterActivity.this, MainActivity.class));
+                                            startActivity(new Intent(com.example.cds.ui.login.RegisterActivity.this, com.example.cds.ui.login.StartActivity.class));
                                             finish();
                                         } else {
                                             btnRegister.setEnabled(true);

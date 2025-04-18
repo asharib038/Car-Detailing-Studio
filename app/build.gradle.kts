@@ -5,11 +5,10 @@ plugins {
 
 android {
     namespace = "com.example.cds"
-    namespace = "com.se.useraccountmanagement"//useraccountmanagement app
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.se.useraccountmanagement"
+        applicationId = "com.example.cds"
         minSdk = 27
         targetSdk = 35
         versionCode = 1
