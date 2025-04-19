@@ -19,6 +19,7 @@ import com.bumptech.glide.load.resource.bitmap.RoundedCorners;
 import com.example.cds.Modelclass.Listing;
 import com.example.cds.Modelclass.Seller;
 import com.example.cds.R;
+import com.example.cds.ui.explore.SellerDetailsActivity;
 import com.example.cds.ui.home.DetailsActivity;
 import com.google.gson.Gson;
 
@@ -46,8 +47,8 @@ public class Explore_Adapter extends ArrayAdapter<Seller> {
         TextView price = convertView.findViewById(R.id.sellerPrice);
         RatingBar ratingBar = convertView.findViewById(R.id.sellerRatingBar);
 
-        name.setText(seller.getS_name());
-        price.setText("Price: ₹" + seller.getS_price());
+        name.setText(seller.getS_name()+" - "+seller.getS_email());
+        price.setText("Starting from: PKR" + seller.getS_price());
         try {
             float rating = (seller.getS_rating());
             ratingBar.setRating(rating);
@@ -55,7 +56,13 @@ public class Explore_Adapter extends ArrayAdapter<Seller> {
             ratingBar.setRating(0f); // default if parsing fails
         }
 
-        Glide.with(getContext()).load(seller.getS_photo()).into(img);
+        Glide.with(getContext()).load(seller.getS_photo()).transform(new RoundedCorners(16)).into(img);
+
+        convertView.setOnClickListener(v -> {
+            Intent intent = new Intent(getContext(), SellerDetailsActivity.class);
+            intent.putExtra("seller_email", seller.getS_email());  // pass only email
+            getContext().startActivity(intent);
+        });
 
         return convertView;
     }
