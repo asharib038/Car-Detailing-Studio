@@ -50,6 +50,7 @@ dependencies {
     implementation("com.github.bumptech.glide:okhttp3-integration:4.15.1")
     implementation(libs.legacy.support.v4)
     implementation(libs.activity)
+    implementation(libs.play.services.location)
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
