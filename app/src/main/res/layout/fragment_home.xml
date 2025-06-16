@@ -2,6 +2,9 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:paddingTop="0dp"
+
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
 
@@ -10,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:padding="12dp">
+        android:padding="1dp">
 
         <!-- Discount Offer Card -->
         <androidx.cardview.widget.CardView
@@ -42,7 +45,7 @@
 
             <EditText
                 android:id="@+id/search_bar"
-                android:layout_width="331dp"
+                android:layout_width="350dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="@drawable/rounded_background"

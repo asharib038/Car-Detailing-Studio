@@ -109,11 +109,11 @@
             android:id="@+id/btn_book"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Book Now"
-            android:backgroundTint="@color/purple_500"
-            android:textColor="@android:color/white"
+            android:layout_marginTop="24dp"
+            android:backgroundTint="@color/blue"
             android:padding="12dp"
-            android:layout_marginTop="24dp" />
+            android:text="Book Now"
+            android:textColor="@android:color/white" />
 
     </LinearLayout>
 </ScrollView>

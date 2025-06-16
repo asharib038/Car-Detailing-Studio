@@ -7,9 +7,11 @@
         android:title="@string/title_home" />
 
     <item
-        android:id="@+id/navigation_dashboard"
-        android:icon="@drawable/ic_dashboard_black_24dp"
-        android:title="@string/title_dashboard" />
+        android:id="@+id/navigation_explore"
+        android:icon="@drawable/ic_explore"
+        android:title="Explore" />
+
+
 
     <item
         android:id="@+id/navigation_bookings"
@@ -17,9 +19,9 @@
         android:title="My Bookings" />
 
     <item
-        android:id="@+id/navigation_explore"
-        android:icon="@drawable/ic_explore"
-        android:title="Explore" />
+        android:id="@+id/navigation_account"
+        android:icon="@drawable/ic_account"
+        android:title="Account" />
 
 
 </menu>

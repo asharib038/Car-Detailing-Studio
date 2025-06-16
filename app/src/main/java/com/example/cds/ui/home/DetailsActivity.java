@@ -32,6 +32,8 @@ import com.google.firebase.Timestamp;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.io.IOException;
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
@@ -55,6 +57,34 @@ public class DetailsActivity extends AppCompatActivity {
         premiumTxt = findViewById(R.id.detail_premium_txt);
         imageView = findViewById(R.id.detail_image);
         btnBook = findViewById(R.id.btn_book);
+
+        TextView basicTxt = findViewById(R.id.detail_basic_txt);
+        TextView premiumTxt = findViewById(R.id.detail_premium_txt);
+
+        final List<String> basicServices = Arrays.asList(
+                "Exterior Wash", "Interior Vacuum", "Tire Shine", "Window Cleaning"
+        );
+        final List<String> premiumServices = Arrays.asList(
+                "Paint Protection", "Engine Bay Cleaning", "Wax & Polish", "Leather Conditioning", "Ceramic Coating"
+        );
+
+        Collections.shuffle(basicServices);
+        Collections.shuffle(premiumServices);
+
+        StringBuilder basicc = new StringBuilder();
+        StringBuilder premiumm = new StringBuilder();
+
+// Pick 2 or 3 from each
+        for (int i = 0; i < 3; i++) {
+            basicc.append("• ").append(basicServices.get(i)).append("\n");
+        }
+        for (int i = 0; i < 3; i++) {
+            premiumm.append("• ").append(premiumServices.get(i)).append("\n");
+        }
+
+        basicTxt.setText(basicc.toString().trim());
+        premiumTxt.setText(premiumm.toString().trim());
+
 
         Listing listing = new Gson().fromJson(getIntent().getStringExtra("listing"), Listing.class);
 
