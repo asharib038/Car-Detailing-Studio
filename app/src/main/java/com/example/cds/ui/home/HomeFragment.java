@@ -145,3 +145,4 @@ public class HomeFragment extends Fragment {
         binding = null;
     }
 }
+
