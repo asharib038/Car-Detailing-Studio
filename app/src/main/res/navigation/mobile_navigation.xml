@@ -12,14 +12,23 @@
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/navigation_dashboard"
-        android:name="com.example.cds.ui.dashboard.DashboardFragment"
-        android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
+        android:id="@+id/navigation_explore"
+        android:name="com.example.cds.ui.explore.ExploreFragment"
+        android:label="Explore"
+        tools:layout="@layout/fragment_explore" />
 
     <fragment
-        android:id="@+id/navigation_notifications"
-        android:name="com.example.cds.ui.notifications.NotificationsFragment"
-        android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_notifications" />
+        android:id="@+id/navigation_bookings"
+        android:name="com.example.cds.ui.booking.BookingFragment"
+        android:label="My Bookings"
+        tools:layout="@layout/fragment_booking3" />
+
+    <fragment
+        android:id="@+id/navigation_account"
+        android:name="com.example.cds.ui.booking.BookingFragment"
+        android:label="Account"
+        tools:layout="@layout/fragment_booking3" />
+
+
+
 </navigation>

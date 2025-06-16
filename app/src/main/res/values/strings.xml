@@ -1,8 +1,19 @@
 <resources>
-    <string name="app_name">CDS</string>
+    <string name="app_name">Kleaners</string>
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
+<<<<<<< explorepage
+
+    <string-array name="payment_methods">
+        <item>Cash</item>
+        <item>Credit Card</item>
+        <item>Bank Transfer</item>
+        <item>Mobile Wallet</item>
+    </string-array>
+
+</resources>
+=======
     <string name="default_web_client_id">151480676926-9jsupplj0kj4pc1gf4b7310f9dhb3e6i.apps.googleusercontent.com</string>
     <string name="app1_name">User Account Management</string>
     <string name="app_logo">App Logo</string>
@@ -17,3 +28,4 @@
     <string name="first_fragment_label">First Fragment</string>
     <string name="second_fragment_label">Second Fragment</string>
 </resources>
+>>>>>>> main

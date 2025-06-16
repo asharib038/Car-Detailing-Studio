@@ -43,6 +43,15 @@ dependencies {
     implementation(libs.lifecycle.viewmodel.ktx)
     implementation(libs.navigation.fragment)
     implementation(libs.navigation.ui)
+<<<<<<< explorepage
+    implementation(libs.firebase.firestore)
+    implementation ("com.github.bumptech.glide:glide:4.16.0")
+    implementation ("com.google.code.gson:gson:2.10.1")
+    implementation("com.github.bumptech.glide:okhttp3-integration:4.15.1")
+    implementation(libs.legacy.support.v4)
+    implementation(libs.activity)
+    implementation(libs.play.services.location)
+=======
 
     // Glide
     implementation("com.github.bumptech.glide:glide:4.16.0")
@@ -57,6 +66,7 @@ dependencies {
     implementation("com.google.android.gms:play-services-auth:20.7.0")
 
     // Testing
+>>>>>>> main
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)

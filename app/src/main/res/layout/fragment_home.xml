@@ -1,9 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:paddingTop="0dp"
 
-    <ListView
-        android:id="@+id/listing_listview"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <LinearLayout
+        android:id="@+id/home_root"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="1dp">
+
+        <!-- Discount Offer Card -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="6dp">
+
+            <TextView
+                android:id="@+id/discount_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:text="🎉 Limited Time Offer: 25% OFF on Premium Packages!"
+                android:textColor="#FFFFFF"
+                android:background="@color/purple_700"
+                android:textStyle="bold"
+                android:textSize="16sp" />
+        </androidx.cardview.widget.CardView>
+
+        <!-- Search and Sort -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:gravity="right|center_vertical"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/search_bar"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/rounded_background"
+                android:drawableLeft="@android:drawable/ic_menu_search"
+                android:hint="Search"
+                android:padding="10dp" />
+
+            <Spinner
+                android:id="@+id/sort_spinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:entries="@array/sort_options" />
+        </LinearLayout>
+
+        <!-- Grid/List View -->
+        <GridView
+            android:id="@+id/listing_listview"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:numColumns="2"
+            android:verticalSpacing="12dp"
+            android:horizontalSpacing="12dp"
+            android:clipToPadding="false" />
+    </LinearLayout>
+
 </FrameLayout>
